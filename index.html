@@ -1,19 +1,278 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crochês da Maria</title>
+    <title>A Magia do Crochê - Sua Loja Online</title>
+    <style>
+        /* Variáveis de Cores */
+        :root {
+            --cor-principal: #a0522d; /* Sienna - Marrom terroso */
+            --cor-secundaria: #deb887; /* Burlywood - Bege claro */
+            --cor-destaque: #8fbc8f; /* DarkSeaGreen - Verde suave */
+            --cor-fundo: #fdf5e6; /* OldLace - Branco cremoso */
+            --cor-texto: #333333;
+            --cor-borda: #ccc;
+        }
+
+        /* Reset Básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+        }
+
+        /* Estrutura Principal */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--cor-principal);
+            color: white;
+            padding: 20px 0;
+            border-bottom: 5px solid var(--cor-destaque);
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* Seção Principal - Destaque */
+        .hero {
+            background-color: var(--cor-secundaria);
+            text-align: center;
+            padding: 60px 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+
+        .hero h2 {
+            font-size: 2em;
+            color: var(--cor-principal);
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 25px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cor-destaque);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--cor-principal);
+        }
+
+        /* Seção de Produtos */
+        .produtos h2 {
+            text-align: center;
+            color: var(--cor-principal);
+            margin-bottom: 30px;
+            font-size: 1.8em;
+        }
+
+        .galeria-produtos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .produto-card {
+            background-color: white;
+            border: 1px solid var(--cor-borda);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .produto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .produto-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .produto-info {
+            padding: 15px;
+        }
+
+        .produto-info h3 {
+            font-size: 1.2em;
+            color: var(--cor-principal);
+            margin-bottom: 5px;
+        }
+
+        .produto-info p {
+            font-weight: bold;
+            color: var(--cor-destaque);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .produto-info a {
+            display: block;
+            background-color: var(--cor-principal);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: normal;
+            transition: background-color 0.3s;
+        }
+
+        .produto-info a:hover {
+            background-color: var(--cor-destaque);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: var(--cor-texto);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        /* Responsividade Básica */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            nav ul li {
+                margin: 0 8px;
+            }
+
+            .galeria-produtos {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
 
-    Crochês da Maria 
+    <header>
+        <div class="container">
+            <h1>A Magia do Crochê ✨</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#encomendas">Encomendas</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#carrinho">🛒 (0)</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <main class="container">
+        <section id="home" class="hero">
+            <h2>Arte Feita à Mão, Com o Coração!</h2>
+            <p>Descubra peças únicas e exclusivas de crochê. De moda a decoração, encontre a que combina com você.</p>
+            <a href="#produtos" class="cta-button">Ver Coleção Completa</a>
+        </section>
 
+        <section id="produtos" class="produtos">
+            <h2>Nossos Produtos em Destaque</h2>
+            
+            <div class="galeria-produtos">
 
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/300x250?text=Bolsa+Crochê" alt="Bolsa de Crochê Elegante">
+                    <div class="produto-info">
+                        <h3>Bolsa de Crochê Elegante</h3>
+                        <p>R$ 159,90</p>
+                        <a href="#">Adicionar ao Carrinho</a>
+                    </div>
+                </div>
 
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/300x250?text=Amigurumi+Ursinho" alt="Amigurumi Ursinho">
+                    <div class="produto-info">
+                        <h3>Amigurumi Ursinho Sonhador</h3>
+                        <p>R$ 89,90</p>
+                        <a href="#">Adicionar ao Carrinho</a>
+                    </div>
+                </div>
 
-    
-    
+                <div class="produto-card">
+                    <img src="https://via.placeholder.com/300x250?text=Capa+Almofada" alt="Capa de Almofada em Crochê">
+                    <div class="produto-info">
+                        <h3>Kit 2 Capas de Almofada</h3>
+                        <p>R$ 120,00</p>
+                        <a href="#">Adicionar ao Carrinho</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="encomendas" style="padding: 40px 0; text-align: center;">
+            <h2>Peças Sob Encomenda</h2>
+            <p>Gostaria de algo exclusivo? Criamos sua peça de crochê personalizada. Entre em contato para um orçamento!</p>
+            <a href="#contato" class="cta-button" style="background-color: var(--cor-principal);">Fazer Orçamento</a>
+        </section>
+
+    </main>
+
+    <footer id="contato">
+        <div class="container">
+            <p>&copy; 2025 A Magia do Crochê. Todos os direitos reservados.</p>
+            <p>Siga-nos: Instagram | Facebook | WhatsApp</p>
+        </div>
+    </footer>
+
 </body>
 </html>
